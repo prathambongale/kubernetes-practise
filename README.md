@@ -4,14 +4,19 @@ This is repository has all kubernetes practise files
 ## kubernetes definition file
 - Top level field:
 
-    >apiVersion: 
-    
-    >kind:
-
-    >metadata:
-
-    >spec:
-
+    ```
+    apiVersion:                 // String field refer below table for values
+    kind:                       // String field refer below table for values
+    metadata:                   // Dictionary type
+      name: myapp-pod           // String type
+      labels:                   // Dictionary type
+        app: myapp  
+        type: front-end    
+    spec:                       // Dictionary type
+      containers:               // list/array
+      - name: container_name
+        image: image_name
+    ```
     ---    
     Possible values for apiVersion and kind
         
